@@ -1,0 +1,146 @@
+/*  css reset -- thank you Eric Meyer:  http://meyerweb.com/eric/tools/css/reset/ 
+*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, b, address, cite, code, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, footer, header, nav, section, summary { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+/*  fix padding -- thank you Paul Irish:  http://paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+* { box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #666;
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: auto;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body > p {
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 30px;
+  text-shadow: 0 0 3px #000;
+}
+
+body > p > a {
+  background: #000;
+  line-height: 30px;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+div#board > div#help {
+  padding: 20px;
+  text-align: left;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: #fff;
+  color: #000;
+  font-size: 30px;
+}
+
+div#board > div#help a {
+  color: blue;
+  text-decoration: none;
+}
+
+div#board > div#help h3 {
+  font-weight: bold;
+}
+
+div#board > div#help h3,
+div#board > div#help p,
+div#board > div#help li {
+  margin: 10px 0;
+}
+
+div#board > div#help li {
+  list-style: inside disc;
+
+}
+div#board {
+  background: #000;
+  margin: auto;
+  position: relative;
+  border-radius: 3px;
+}
+
+div#board > a {
+  position: absolute;
+  height: 78px;
+  width: 78px;
+  margin: 1px 0 0 1px;
+  font-size: 50px;
+  line-height: 78px;
+  color: #eee;
+  box-shadow: inset 0 0 2px #000;
+  text-shadow: 0 0 3px #000;
+  border-radius: 3px;
+  cursor: default;
+  transition: all .25s;  
+}
+
+div#board > a.selected {
+  font-size: 70px;
+  text-shadow: 0 0 5px #000;
+  line-height: 73px;
+  color: #fff;
+}
+
+div#board > a.valid {
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+}
+
+div#board > a.c0 {
+  background-color: #333;
+  color: #666;
+}
+
+div#board > a.c1 {
+  background-color: blue;
+}
+
+div#board > a.c2 {
+  background-color: red;
+}
+
+div#board > a.c3 {
+  background-color: purple;
+}
+
+div#board > a.c4 {
+  background-color: yellow;
+}
+
+div#board > a.c5 {
+  background-color: green;
+}
+
+div#board > a.c6 {
+  background-color: orange;
+}
+
+div#board > a.c7 {
+  background-color: white;
+}

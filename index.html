@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <title>3grams</title>
+  <link href="presentation.css" media="screen" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+</head>
+<body>
+<p id="status"></p>
+<div id="board">
+  <div id="help" class="hidden">
+    <h3>What's This?</h3>
+    <p>3grams is just like that game we used to play with golf tees or Chinese checkers: jump one piece over another, and pick up the one you jumped. You're done when you have one piece left or can't make any more moves.</p>
+    <p>On the board during the game are black pieces, white pieces, primary-colored pieces, and secondary-colored pieces.</p>
+    <p>If you're having trouble telling the colors apart, each piece carries a trigram with an arrangement of zero to three bars. It's pretty easy to tell how they combine after a bit of practice.</p>
+    <h3>Jumping Over</h3>
+    <p>When a piece jumps over another piece, that piece turns black.</p>
+    <ul>
+    <li>Any single-bar piece (red, yellow, or blue) may jump over any other single-bar piece.</li>
+    <li>In all other cases, the piece in the middle must contain the color of the piece that's doing the jumping.</li>
+    <li>Blue may jump green, purple, or white.</li>
+    <li>Red may jump purple, orange, or white.</li>
+    <li>Yellow may jump green, orange, or white.</li>
+    <li>A double-bar piece&mdash;green, purple, or orange&mdash;may only jump over its own color or a white piece.</li>
+    <li>White pieces may only jump other white pieces.</li>
+    <li>Black pieces may not jump.</li>
+    </ul>
+    <h3>Landing Atop</h3>
+    <p>When a piece lands, the two colors combine.</p>
+    <ul>
+    <li>Any piece may land on a black piece or a piece of its own color.</li>
+    <li>A double-bar or triple-bar piece may only land on a black piece or a piece of its own color.</li>
+    <li>A single-bar piece&mdash;red, yellow, or blue&mdash;may land on any other single-bar piece or any double-bar not containing its color, and will combine to form a two- or three-bar piece.</li>
+    </ul>
+    <h3>Winning</h3>
+    <p>The game ends when there are no more legal moves to be made.</p>
+    <h3>Scoring</h3>
+    <p>Your score is the number of moves you made times the number of bars left on all the pieces on the board.  The lower your score the better.</p> 
+    <h3>Strategy</h3>
+    <ul>
+    <li>Some moves are more productive than others.</li>
+    <li>Jumping a single over a single and landing on an empty space subtracts only one bar from the game.</li>
+    <li>Jumping a triple over a triple and landing on a triple subtracts six bars from the game in one move.</li>
+    <li>Work on getting those doubles out of the corners first.  Diagonal jumps over freshly-created triples feel especially satisfying.</li>
+    <li>Use your Undo sparingly; your score will go up, since each undo counts as a move.</li>
+    <li>Stuck? Restart by reloading the page.</li>
+    <li>Want to try a different board before tomorrow's game shows up? Click the Practice button, visible when Help is showing.</li>
+    </ul>
+    <h3>History</h3>
+    <p>Long-time gamers may recall <a target="_blank" href="http://en.wikipedia.org/wiki/Tesserae_(video_game)">Tesserae, a 1990 puzzle game from Inline Design</a>.  I invented Stained Glass&mdash;the shareware game upon which Tesserae is based&mdash;in 1987, and every few years feel compelled to re-implement it using the platform I like best.  This time it's JavaScript, running on a flat GitHub page with a bit of Twitter integration for daily leaderboards.</p>
+  </div>
+</div>
+<p><a id="undo" class="hidden">Undo</a> <span id="score"></span> <a id="instructions">Help</a> <a id="practice" class="hidden">Practice</a></p>
+<script src="behavior.js" type="text/javascript"></script>
+</body>
+</html>
