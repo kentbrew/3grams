@@ -286,6 +286,7 @@
               }
               // always deselect 
               $.f.removeClass($.v.selectedTile, 'selected');
+              $.v.selectedTile.style.fontSize = $.a.size * .75 + 'px';
 
               for (var i = 0; i < $.a.rows * $.a.cols; i = i + 1) {
                 var t = $.d.getElementById('t' + i);
@@ -300,6 +301,7 @@
               if (state) {
                 if ($.f.hazMove(el, true)) {
                   $.f.addClass(el, 'selected');
+                  el.style.fontSize = $.a.size * .90 + 'px';
                   $.v.selectedTile = el;
                 }
               }
@@ -342,7 +344,7 @@
           }
           $.v.state = $.f.shuffle();
           $.s.status.innerHTML = '';
-          $.s.board.innerHTML = '';
+          // $.s.board.innerHTML = '';
           for (var i = 0; i < $.v.state.length; i = i + 1) {
             var r = ~~(i / $.a.cols);
             var c = i % $.a.cols;
@@ -352,6 +354,10 @@
             $.f.set(a, 'data-state', $.v.state[i]);
             a.style.top = r * $.a.size + 'px';
             a.style.left = c * $.a.size + 'px';
+            a.style.height = $.a.size - 2 + 'px';
+            a.style.width = $.a.size - 2 + 'px';
+            a.style.fontSize = ~~($.a.size * .75) + 'px';
+            a.style.lineHeight = $.a.size - 2 + 'px';
             a.className = 'c' + $.v.state[i];
             $.s.board.appendChild(a);
           }
@@ -362,6 +368,11 @@
         },
         init: function () {
           $.d.b = $.d.getElementsByTagName('BODY')[0];
+          var w = $.w.innerWidth;
+          if (w > 600) {
+            w = 480;
+          }
+          $.a.size = w / 6;
           $.f.listen($.d.b, 'click', $.f.click);
           $.f.listen($.d.b, 'touchstart', $.f.click);
           $.s.help = $.d.getElementById('help');

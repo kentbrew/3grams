@@ -101,9 +101,8 @@ div#board > a {
 }
 
 div#board > a.selected {
-  font-size: 70px;
+  font-size: 110%;
   text-shadow: 0 0 5px #000;
-  line-height: 73px;
   color: #fff;
 }
 
