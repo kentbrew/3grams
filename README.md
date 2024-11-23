@@ -47,7 +47,7 @@ Your score is the number of moves you made times the number of bars left on all 
 * Stuck? Restart by reloading the page.
 * Want to try a different board before tomorrow's game shows up? Click the Practice button, visible when Help is showing.
 
-###History
+### History
 
 Long-time gamers may recall [Tesserae, a 1990 puzzle game from Inline Design](http://en.wikipedia.org/wiki/Tesserae_(video_game)).  I invented Stained Glass&mdash;the shareware game upon which Tesserae is based&mdash;in 1987, and every few years feel compelled to re-implement it using the platform I like best.  
 
